@@ -323,6 +323,7 @@ namespace Bet
                     {
                         bet = ("Odds");
                         if (winningNumber % 2 == 1) boo = true;
+                        if (winningNumber == 37) boo = false;
                         Bet me = new Bet(bet, dollars, winningNumber, boo, 2);
                         bets.Add(me);
                         return true;
@@ -331,6 +332,7 @@ namespace Bet
                     {
                         bet = ("Evens");
                         if (winningNumber % 2 == 0) boo = true;
+                        if (winningNumber == 0) boo = false;
                         Bet me = new Bet(bet, dollars, winningNumber, boo, 2);
                         bets.Add(me);
                         return true;
